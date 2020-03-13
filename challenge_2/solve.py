@@ -16,7 +16,7 @@ for i in tqdm(np.arange(3, N, 2)):
         strp = str(i)
         if '2' in strp:
             continue
-        possibilities = set(map(lambda i: int("".join(i)), permutations(strp)))
+        possibilities = list(map(lambda i: int("".join(i)), permutations(strp)))
         all_primes = True
         for j in possibilities:
             if l[j]:
